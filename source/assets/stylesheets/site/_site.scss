@@ -3,13 +3,37 @@
 // ------------------------------------------------------------
 .site-header {
 	@include clearfix;
-	background-color: $white-smoke;
+	background-color: $black;
+	color:$white;
 	padding:1em;
+	text-align: right;
+	font-size:.8em;
+	a {
+		color:$white;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
-.site-main{}
+.site-main{
+	margin-top:30px;
+}
 .site-footer{}
 
-
+.page-title {
+	color:$primary;
+	font-style: italic;
+	div {
+		font-size:.8em;
+	}
+	h1 {
+		font-family: "CrimsonSemibold", 'Times New Roman', Georgia, serif;
+		font-size:2em;
+		line-height:.8em;
+	}
+}
 
 // ------------------------------------------------------------
 // Site Nav
