@@ -3,11 +3,16 @@
 // ------------------------------------------------------------
 .site-header {
 	@include clearfix;
+
 	background-color: $black;
 	color:$white;
 	padding:1em;
 	text-align: right;
-	font-size:.8em;
+	font-size:.8em;	
+
+	@include media($medium-screen) {
+		font-size:1em;
+	}
 	a {
 		color:$white;
 		text-decoration: underline;
@@ -26,15 +31,36 @@
 	color:$primary;
 	font-style: italic;
 	div {
-		font-size:.8em;
+		font-size:1em;
+
+		@include media($medium-screen + 6) {
+			font-size:2em;
+		}
 	}
 	h1 {
 		font-family: "CrimsonSemibold", 'Times New Roman', Georgia, serif;
-		font-size:2em;
+		font-size:3em;
 		line-height:.8em;
+
+		@include media($medium-screen + 6) {
+			font-size:5em;
+			line-height:1em;
+		}
 	}
 }
 
+.jail {
+	display:block;
+	border-radius:10px;
+	height:auto;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:30px;
+	@include media($medium-screen) {
+		float:right;
+		margin:30px 0 30px 30px;
+	}
+}
 // ------------------------------------------------------------
 // Site Nav
 // ------------------------------------------------------------
